@@ -3,16 +3,16 @@ function takeANumber(katzDeli, newPerson){
  return "Welcome, " + newPerson + ". You are number " + (katzDeli.length) + " in line."
 }
 
-function nowServing(katzDeli){
+function nowServing(line){
   
   
-  if(katzDeli.length === 0){
+  if(line.length === 0){
     return "There is nobody waiting to be served!"
   }
   else {
     
-    var customer = katzDeli[0]
-    let deliLine = katzDeli.slice(1)
+    var customer = line[0]
+    line = line.shift()
     return ("Currently serving " + customer + '.')
     
 
